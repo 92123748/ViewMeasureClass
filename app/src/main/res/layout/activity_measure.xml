@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nature.ViewClassMeasure.onmeasure.MeasureLinerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".onmeasure.MeasureActivity">
+
+    <TextView
+        android:id="@+id/tv_parent_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.nature.ViewClassMeasure.onmeasure.MeasureLinerLayout
+        android:id="@+id/ml_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/rg_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb_matchparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="match_parent" />
+
+            <RadioButton
+                android:id="@+id/rb_excatly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200dp" />
+
+            <RadioButton
+                android:id="@+id/rb_wrapcontent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="wrap_content" />
+        </RadioGroup>
+
+        <com.nature.ViewClassMeasure.onmeasure.MeasureTextView
+            android:id="@+id/tv_child"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我是textview" />
+
+        <TextView
+            android:id="@+id/tv_child_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:id="@+id/rg_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb_cmatchparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="match_parent"
+
+                />
+
+            <RadioButton
+                android:id="@+id/rb_cexcatly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200dp" />
+
+            <RadioButton
+                android:id="@+id/rb_cwrapcontent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="wrap_content" />
+        </RadioGroup>
+    </com.nature.ViewClassMeasure.onmeasure.MeasureLinerLayout>
+</com.nature.ViewClassMeasure.onmeasure.MeasureLinerLayout>
