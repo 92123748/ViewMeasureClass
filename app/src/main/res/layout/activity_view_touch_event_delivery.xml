@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".touchevent.ViewTouchEventDeliveryActivity">
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sw_isinterept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="父View是否中断down事件传递到Textview" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sw_ismoveinterept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="父View是否中断move事件传递到Textview" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sw_isallowinterept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="子View是否允许父亲view中断事件传递到Textview" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sw_addlistener"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="是否给子view设置clickAble,消费touch事件" />
+
+    <com.nature.ViewClassMeasure.touchevent.TouchEventLinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <com.nature.ViewClassMeasure.touchevent.TouchEventTextView
+            android:id="@+id/tv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:padding="8dp"
+            android:text="我是子View" />
+    </com.nature.ViewClassMeasure.touchevent.TouchEventLinearLayout>
+
+    <TextView
+        android:id="@+id/tv_parent_touch_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/tv_child_touch_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
